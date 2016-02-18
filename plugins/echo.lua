@@ -17,7 +17,9 @@ return {
   usage = "!echo [whatever]: echoes the msg",
   patterns = {
     "^[!/][Ee]cho +(.+)$",
-    "^بگو +(.+)$",
+    "^[Ee]cho +(.+)$",
+    "^بگو +(.+)$"
+    "^تکرار +(.+)$"
   }, 
   run = run 
 }
