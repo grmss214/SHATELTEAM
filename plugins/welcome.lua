@@ -55,13 +55,13 @@ local function description_rules(msg, nama)
       local rules = ""
       if data[tostring(msg.to.id)]["description"] then
          about = data[tostring(msg.to.id)]["description"]
-         about = "\nâ€º ØªÙˆØ¶ÛŒØ­Ø§Øª Ú¯Ø±ÙˆÙ‡ :\n"..about.."\n"
+         about = "\n› توضیحات گروه :\n"..about.."\n"
       end
       if data[tostring(msg.to.id)]["rules"] then
          rules = data[tostring(msg.to.id)]["rules"]
-         rules = "\nâ€º Ù‚ÙˆØ§Ù†ÛŒÙ† Ú¯Ø±ÙˆÙ‡ :\n"..rules.."\n"
+         rules = "\n› قوانین گروه :\n"..rules.."\n"
       end
-       local sambutan = "Ø³Ù„Ø§Ù… "..nama.." Ø¹Ø²ÛŒØ²\nØ¨Ù‡ Ú¯Ø±ÙˆÙ‡ "..string.gsub(msg.to.print_name, "_", " ").."\nØ®ÙˆØ´ Ø¢Ù…Ø¯ÛŒØ¯ ØŒ Ø´Ù…Ø§ Ù…ÛŒØªÙˆØ§Ù†ÛŒØ¯ Ø¨Ù‡ Ú©Ù…Ú©\nØ¯Ø³ØªÙˆØ± /help Ø±Ø§Ù‡Ù†Ù…Ø§ÛŒÛŒ Ø¯Ø±ÛŒØ§ÙØª Ú©Ù†ÛŒØ¯.\n"
+       local sambutan = "سلام "..nama.." عزیز\nبه گروه "..string.gsub(msg.to.print_name, "_", " ").."\nخوش آمدید ، شما میتوانید به کمک\nدستور /help راهنمایی دریافت کنید.\n"
       local text = sambutan..about..rules.."\n"
       local receiver = get_receiver(msg)
       send_large_msg(receiver, text, ok_cb, false)
@@ -91,7 +91,7 @@ local function run(msg, matches)
       description_rules(msg, nama)
    elseif matches[1] == "chat_del_user" then
        local bye_name = msg.action.user.first_name
-       return 'âœ‹ðŸ˜ Ø®Ø¯Ø§Ø­Ø§ÙØ¸ \n' ..bye_name 
+       return '✋😐 خداحافظ \n' ..bye_name 
    end
 end
 
