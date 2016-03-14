@@ -227,25 +227,19 @@ function create_config( )
     "admin",
     "plugins"
     },
-    sudo_users = {130810602,tonumber(our_id)},--Sudo users
+    sudo_users = {185532812,tonumber(our_id)},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
+    about_text = [[grmss214 v1 - Open Source
 An advance Administration bot based on yagop/telegram-bot 
-https://github.com/SEEDTEAM/TeleSeed
+https://github.com/grmss214/SHATELTEAM
 Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@Rondoozle [Developer]
-@seyedan25 [Manager]
+@joker_admin_2
 Special thanks to
 awkward_potato
 Siyanew
 topkecleon
 Vamptacus
-Our channels
-@teleseedch [English]
-@iranseed [persian]
 ]],
     help_text_realm = [[
 Realm Commands:
