@@ -10,7 +10,7 @@ return {
   usage = "!tosupport : Return supports link",
   patterns = {
     "^(tosupport)$",
-    "^(tosupport)$"
+    "^[!/](tosupport)$"
   },
   run = run
 }
