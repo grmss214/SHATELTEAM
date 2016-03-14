@@ -6,9 +6,9 @@ local function callback(extra, success, result)
 end
 
 local function run(msg, matches)
-  local user = 130810602
+  local user = اینجا کد کاربری خود را بنویسید
 
-  if matches[1] == "insudo" then
+  if matches[1] == "اینوایت سودو" then
     user = 'user#id'..user
   end
 
@@ -16,7 +16,7 @@ local function run(msg, matches)
   if msg.to.type == 'chat' then
     local chat = 'chat#id'..msg.to.id
     chat_add_user(chat, user, callback, false)
-    return "inviting sudo......"
+    return "سودو در این گپ هستش"
   else 
     return 'This isnt a chat group!'
   end
@@ -24,12 +24,12 @@ local function run(msg, matches)
 end
 
 return {
-  description = "insudo", 
+  description = "اینوایت سودو", 
   usage = {
     "!invite name [user_name]", 
     "!invite id [user_id]" },
   patterns = {
-    "^(insudo)$"
+    "^(اینوایت سودو)$"
   }, 
   run = run 
 }
