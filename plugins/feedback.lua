@@ -1,33 +1,53 @@
--- FeedBack Plugin For Xamarin Source v1.2
- --https://github.com/amirhmz
-
 do
 
  function run(msg, matches)
- local ch = 'chat#id'..msg.to.id
- local fuse = '📌 #فیدبک جدید\n\n👤 نام کاربر : ' .. msg.from.print_name .. '\n\n👤 نام کاربری : @' .. msg.from.username ..'\n\n👤 کد کاربر : ' .. msg.from.id ..'\n\n👤 کد گروه : '..msg.to.id.. '\n\n📝 متن پیام :\n\n' .. matches[1]
+
+ 
+
+  local fuse = '📌  فید بک جدید\n\n👤 کد کاربر : ' .. msg.from.id .. '\n\n🔍 اسم: ' .. msg.from.print_name ..'\n\n🈯️ یوزرنیم: @' .. msg.from.username .. '\n\n 📝 پیام مورد نظر:\n' .. matches[1] 
+
  local fuses = '!printf user#id' .. msg.from.id
 
+ 
+
+ 
 
    local text = matches[1]
-   local chat = "chat#id"..108481656
 
-  local sends = send_msg(chat, fuse, ok_cb, false)
-  return '✅ Message successfully sent'
+   local chat = "chat#id"..کد گروه فیدبکتونو اینجا بنویسید
+
+   --like : local chat = "chat#id"..12345678
+
+   
+
+  local sends = send_msg(chat, fuse, ok_cb, true)
+
+  return '✅ پیغام شما ارسال شد ✅'
+
+ 
 
  end
+
  end
+
  return {
+
+  
 
   description = "Feedback",
 
-  usage = "feedback: Send A Message To Admins.",
+ 
+
+  usage = "!feedback message",
+
   patterns = {
-  "^[Ff]eedback (.*)$",
-  "^[Ff]eedback (.*)$"
-  
+
+  "^فیدبک (.*)$"
+
+ 
+
   },
+
   run = run
+
  }
- 
- 
