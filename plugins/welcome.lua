@@ -1,7 +1,4 @@
--- https://github.com/amirhmz/
--- https://telegram.me/AmirDark/
-
-local add_user_cfg = load_from_file('data/add_user_cfg.lua')
+ocal add_user_cfg = load_from_file('data/add_user_cfg.lua')
 
 local function template_add_user(base, to_username, from_username, chat_name, chat_id)
    base = base or ''
@@ -55,13 +52,13 @@ local function description_rules(msg, nama)
       local rules = ""
       if data[tostring(msg.to.id)]["description"] then
          about = data[tostring(msg.to.id)]["description"]
-         about = "\n› توضیحات گروه :\n"..about.."\n"
+         about = "\nتوضیحات :\n"..about.."\n"
       end
       if data[tostring(msg.to.id)]["rules"] then
          rules = data[tostring(msg.to.id)]["rules"]
-         rules = "\n› قوانین گروه :\n"..rules.."\n"
+         rules = "\nقوانین :\n"..rules.."\n"
       end
-       local sambutan = "سلام "..nama.." عزیز\nبه گروه "..string.gsub(msg.to.print_name, "_", " ").."\nخوش آمدید ، شما میتوانید به کمک\nدستور /help راهنمایی دریافت کنید.\n"
+      local sambutan = "سلام "..nama.."\nخوش اومدی به این گروه '"..string.gsub(msg.to.print_name, "_", " ").."' rules شما میتوانید با دستور قوانین را بخوانید"
       local text = sambutan..about..rules.."\n"
       local receiver = get_receiver(msg)
       send_large_msg(receiver, text, ok_cb, false)
@@ -91,7 +88,7 @@ local function run(msg, matches)
       description_rules(msg, nama)
    elseif matches[1] == "chat_del_user" then
        local bye_name = msg.action.user.first_name
-       return '✋😐 خداحافظ \n' ..bye_name 
+       return 'خداحافظ '..bye_name
    end
 end
 
@@ -105,5 +102,3 @@ return {
    },
    run = run
 }
--- https://github.com/amirhmz/
--- https://telegram.me/AmirDark/
