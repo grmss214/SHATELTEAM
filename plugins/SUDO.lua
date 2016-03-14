@@ -2,7 +2,7 @@ do
 
 function run(msg, matches)
   return [[
-  👥Sudoers TeleQueen : 
+  👥سودو های تله کویین بات : 
   🔭 @joker_admin_2 130810602 👥 
   ]]
 
@@ -11,7 +11,7 @@ return {
   description = "shows sudoers", 
   usage = "!sudoers : return sudousers",
   patterns = {
-    "^SUDOERS$",
+    "^سودو$",
     "^/sudoers$",
     "^!sudoers$",
     "^sudoers$",
